@@ -17,7 +17,5 @@ if (__name__ == "__main__"):
         ("/", uploadImgHandler),
         ("/img/(.*)", tornado.web.StaticFileHandler, {'path': 'upload'})
     ])
-
-    app.listen(8080)
-    print("Listening on port 8080")
+    
     tornado.ioloop.IOLoop.instance().start()
